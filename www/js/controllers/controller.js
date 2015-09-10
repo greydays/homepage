@@ -2,11 +2,11 @@
 
 module.exports = function(www) {
 
-  www.controller('feedbackController', ['$scope', '$http' function($scope, $http) {
+  www.controller('feedbackController', ['$scope', function($scope) {
 
       console.log('hello');
 
-    };
+
 
   }]);
 };

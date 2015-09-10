@@ -9,11 +9,14 @@ var homepage = angular.module('homepage', ['ngRoute']);
 require('./controllers/controller')(homepage);
 
 //directives
-require('./directives/directive')(homepage);
+require('./directives/directives')(homepage);
 
 //pageview routing
 homepage.config(['$routeProvider', function($routeProvider) {
   $routeProvider
+    .when('/home', {
+      templateUrl: 'templates/home.html'
+    })
     .when('/feedback', {
       templateUrl: 'templates/feedback.html',
       controller: 'feedbackController'
