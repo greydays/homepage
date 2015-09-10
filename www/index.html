@@ -10,30 +10,51 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
 
+    <link href='https://fonts.googleapis.com/css?family=Muli:400,300,300italic,400italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/application.css">
   </head>
-  <body>
+  <body data-ng-app="homepage">
     <header>
-      <div>
+      <div class="container">
         <a href="/index.html">
-          <h1>Ryan Flaherty</h1>
+          <h1 class="header_logo">Ryan Flaherty</h1>
         </a>
-        <nav>
-          <a href="index.html">Home</a>
-          <a href="grid.html">Grid</a>
-          <a href="api.html">APIs</a>
-          <a href="about.html">About</a>
+        <nav class="header_nav">
+          <a href="#/home">Home</a>
+          <a href="#/grid">Grid</a>
+          <a href="#/feedback">Feedback</a>
+          <a href="#/about">About</a>
         </nav>
       </div>
     </header>
+
     <main>
-      <section>
-
-      </section>
-      <aside></aside>
+      <div data-ng-view></div>
     </main>
-    <footer></footer>
 
+    <footer>
+      <div class="container">
+        <p>footer text</p>
+        <div class="social_links">
+          <a href="https://www.linkedin.com/in/rcflaherty">
+            <span class="icon-linkedin2"></span>
+          </a>
+          <a href="https://twitter.com/DevInTheDetails">
+            <span class="icon-twitter"></span>
+          </a>
+          <a href="https://github.com/greydays">
+            <span class="icon-github4"></span>
+          </a>
+        </div>
+      </div>
+
+    </footer>
+    <nav class="mobile_nav">
+      <a href="#/home">Home</a>
+      <a href="#/grid">Grid</a>
+      <a href="#/feedback">Feedback</a>
+      <a href="#/about">About</a>
+    </nav>
     <script src="js/bundle.js"></script>
   </body>
 </html>
